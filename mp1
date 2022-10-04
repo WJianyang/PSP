@@ -1,0 +1,21 @@
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+void main(){
+	pid_t pid;
+	pid = fork();
+	if(pid==0){
+	printf("Jianyang");
+	fork();
+	printf("Mi hijo es %d", getpid());
+	 
+	}
+	else{
+	wait(NULL);
+	printf(" y mi pid es %d \n",getpid());
+	}
+	exit(0);
+}
