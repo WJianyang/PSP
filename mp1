@@ -9,7 +9,6 @@ void main(){
 	pid = fork();
 	if(pid==0){
 	printf("Jianyang");
-	fork();
 	printf("Mi hijo es %d", getpid());
 	 
 	}
